@@ -5,7 +5,7 @@
 ;Find the shortest path through the "maze". 
 ;Because there are multiple shortest paths, you must return the length of the shortest path, not the path itself.
 
-(fn [start goal]
+(defn path-len [start goal]
   (letfn [
     ; for each element in the given vector, compute up to three elements (e/2,e+2, and e*2), discarding values that
     ; are not integers
@@ -27,3 +27,5 @@
          (iterate 
             next-row
         [start]))))))
+
+(println (path-len 1 8))
