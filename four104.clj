@@ -1,5 +1,5 @@
 ; convert an integer to a roman string
-(fn [value]
+(defn to-roman [value]
 (apply str 
   (let [value (str value)
         ; i is 1,10,100,1000, v is 50,500,5000, x is 10,100,1000 
@@ -20,3 +20,6 @@
                (ms digit))) 
             powers 
             value))))
+
+(println (to-roman 123))
+(println (to-roman 345))
