@@ -7,6 +7,7 @@
         v "VLD" 
         x "XCM"
         ; representation of each digit in roman numerals
+        ; (for example, 3 is III, 30 is XXX, 300 is CCC, etc.
         ms  {\1 [i] \2 [i i] \3 [i i i]
              \4 [i v] \5 [v] \6 [v i]
              \7 [v i i] \8 [v i i i] \9[i x]}
