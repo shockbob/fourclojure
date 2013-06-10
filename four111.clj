@@ -1,3 +1,7 @@
+; find if the given word can be put in the crossword puzzle
+; the puzzle is given as a vector of strings, where _ is an unsolved grid cell, and # is a delimeter between words
+; both horizonal and vertical directions are considered
+
 (defn find-puzzle [word puzzle]
   (letfn [
     ; get rid of all the spaces and return a collection of words in the puzzle
