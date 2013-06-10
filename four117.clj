@@ -1,3 +1,7 @@
+; return true if there is a path from the Mouse to the Cheese
+; The maze is given as a vector of strings, with the Mouse given as an "M"
+; the cheese as "C" clear path grids as blanks and blocked grids as # characters
+
 (defn mouse-to-cheese [in]
 (let [
   nr (count in)
