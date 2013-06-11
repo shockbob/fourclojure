@@ -1,3 +1,8 @@
+; find winning moves in a tic tac toe board
+; for the given piece
+; the board is a vector of vectors, :x, :o, and :e representing X, O, and empty spots
+
+
 (defn find-wins [pc board]
   (let  [
     who-won (fn [board]
@@ -6,7 +11,7 @@
         (partition 3
           (map
             board
-            [0 1 2 3 4 5 6 7 8
+            [0 1 2 3 4 5 6 7 8   ; the winning combos, horizontal, vertical, and diagonals
              0 3 6 1 4 7 2 5 8
              0 4 8 2 4 6]))))
     flat-board (vec (flatten board))
