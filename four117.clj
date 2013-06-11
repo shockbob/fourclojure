@@ -43,15 +43,12 @@
                              (get-in bd [r c])))))))
    find-path
       (fn find-path [bd]
-         ; 
-
-
-
-         (if-let [is (find-in-board bd \M)]
-                (let [ns (mapcat neighbors is)
+         
+         (if-let [is (find-in-board bd \M)]       ; find all the Mice
+                (let [ns (mapcat neighbors is)        ; find all the empty mouse neighbors
                       es (filter (partial is-empty? bd) ns)]
                   (cond
-                    (some is-cheese? ns) true
+                    (some is-cheese? ns) true   ; if one of the neighbors is cheese, return true
                     (seq es) (find-path (next-board bd es))))))]
   (true? (find-path in))))
 
